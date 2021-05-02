@@ -39,9 +39,9 @@ class Home extends BaseController
 		$modelo=new Modelo();
 		$datos=[
 			"nombre"=> $_POST['nombre'],
-			"categoria"=> $_POST['nombre'],
-			"precio"=> $_POST['nombre'],
-			"descripcion"=> $_POST['nombre']
+			"categoria"=> $_POST['categoria'],
+			"precio"=> $_POST['precio'],
+			"descripcion"=> $_POST['descripcion']
 		];
 
 		$modelo->insertar($datos);
