@@ -11,13 +11,47 @@
     <title>Inicio</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
 
-    
-	
-	
-	
-	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<form method="post" action="">
+					<label for="">nombre</label>
+					<input class="form-control" type="text" name="nombre">
+					<label for="">Categoria</label>
+					<input class="form-control" type="text" name="categoria">
+					<label for="">Precio</label>
+					<input class="form-control" type="number" name="precio">
+					<label for="">Descripcion</label>
+					<input class="form-control" type="text" name="descripcion">
+				</form>		
+				<br>		
+			</div>
+			<div class="col-md-6">
+				<table class="table table-dark">
+					<thead class="thead-light">
+						<tr>
+							<th>Nombre</th>
+							<th>Categoria</th>
+							<th>Precio</th>
+							<th>Descripcion</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php foreach($datos as $info): ?>
+						<tr>
+							<td><?php echo $info->nombre ?></td>
+							<td><?php echo $info->categoria ?></td>
+							<td><?php echo $info->precio ?></td>
+							<td><?php echo $info->descripcion ?></td>
+						</tr>
+						<?php endforeach?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
 	<!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -2,10 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Models\Modelo;
+
 class Home extends BaseController
 {
 	public function index()
 	{
-		return view('inicio');
+		$modelo= new Modelo();
+		$datos=$modelo->listar();
+
+		$info=["datos"=>$datos];
+
+		return view('inicio', $info);
 	}
 }
