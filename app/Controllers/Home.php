@@ -15,4 +15,20 @@ class Home extends BaseController
 
 		return view('inicio', $info);
 	}
+
+	public function agregar(){
+		$modelo=new Modelo();
+		$datos=[
+			"nombre"=> $_POST['nombre'],
+			"categoria"=> $_POST['nombre'],
+			"precio"=> $_POST['nombre'],
+			"descripcion"=> $_POST['nombre']
+		];
+
+		$modelo->insertar($datos);
+
+		return redirect()->to(base_url().'/');
+
+	}
+
 }

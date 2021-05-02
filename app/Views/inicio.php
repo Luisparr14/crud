@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<form method="post" action="">
+				<form method="post" action="<?php echo base_url().'/agregar'?>">
 					<label for="">nombre</label>
 					<input class="form-control" type="text" name="nombre">
 					<label for="">Categoria</label>
@@ -24,6 +24,11 @@
 					<input class="form-control" type="number" name="precio">
 					<label for="">Descripcion</label>
 					<input class="form-control" type="text" name="descripcion">
+					<br>
+					<div>
+						<button class="btn btn-primary" type="submit">Agregar</button>
+					</div>
+
 				</form>		
 				<br>		
 			</div>

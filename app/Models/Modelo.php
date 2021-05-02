@@ -9,4 +9,9 @@ class Modelo extends Model{
         return $listar->getResult();
     }
 
+    public function insertar($datos){
+        $insertar=$this->db->table('productos');
+        $insertar->insert($datos);
+    }
+
 }
