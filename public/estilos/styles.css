@@ -1,6 +1,4 @@
-body{
-    background-color: blue;
-}
+
 .contenedor-p{
     display: flex;
     height: 100vh;
@@ -12,4 +10,18 @@ body{
     /* outline: 2px solid turquoise; */
     height: 310px;
     overflow: auto;
+}
+
+label, td, th,a, button{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div h1 {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+    font-size: 60px;
+}
+
+a{
+    margin-right: 15px;
 }
