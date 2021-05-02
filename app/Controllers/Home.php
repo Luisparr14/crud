@@ -25,6 +25,15 @@ class Home extends BaseController
 
 		return view('editar', $info);
 	}
+	public function verEliminar()
+	{
+		$modelo= new Modelo();
+		$datos=$modelo->listar();
+
+		$info=["datos"=>$datos];
+
+		return view('eliminar', $info);
+	}
 
 	public function agregar(){
 		$modelo=new Modelo();
@@ -53,6 +62,13 @@ class Home extends BaseController
 
 		$modelo->editar($datos,$nombre);		
 
+		return redirect()->to(base_url().'/');
+	}
+
+	public function eliminar(){
+		$modelo=new Modelo();
+		$datos=["nombre"=>$_POST['nombre']];
+		$modelo->eliminar($datos);
 		return redirect()->to(base_url().'/');
 	}
 

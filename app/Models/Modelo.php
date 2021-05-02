@@ -23,4 +23,10 @@ class Modelo extends Model{
         }
     }
 
+    public function eliminar($datos){
+        $eliminar=$this->db->table('productos');
+        $eliminar->where($datos);
+        $eliminar->delete();
+    }
+
 }

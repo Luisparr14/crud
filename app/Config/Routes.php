@@ -34,9 +34,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/editar', 'Home::verEditar');
+$routes->get('/eliminar', 'Home::verEliminar');
 
 $routes->post('/agregar', 'Home::agregar');
 $routes->post('/editar', 'Home::editar');
+$routes->post('/eliminar', 'Home::eliminar');
 
 /*
  * --------------------------------------------------------------------
