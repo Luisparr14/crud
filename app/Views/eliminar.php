@@ -19,10 +19,9 @@
 					<label for="">nombre</label>
 					<input class="form-control" type="text" name="nombre">				
 					<br>
-					<div>
+					<div class="container text-center">
 						<button class="btn btn-danger" type="submit">Eliminar</button>
 					</div>
-
 				</form>		
 				<br>		
 			</div>

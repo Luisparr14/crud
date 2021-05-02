@@ -25,7 +25,7 @@
 					<label for="">Descripcion</label>
 					<input class="form-control" type="text" name="descripcion">
 					<br>
-					<div>
+					<div class="container text-center">
 						<button class="btn btn-warning" type="submit">Editar</button>
 					</div>
 

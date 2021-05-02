@@ -1,0 +1,15 @@
+body{
+    background-color: blue;
+}
+.contenedor-p{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    /* outline: 2px solid turquoise; */
+    height: 310px;
+    overflow: auto;
+}
