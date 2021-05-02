@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<form method="post" action="<?php echo base_url().'/agregar'?>">
+				<form method="post" action="<?php echo base_url().'/editar'?>">
 					<label for="">nombre</label>
 					<input class="form-control" type="text" name="nombre">
 					<label for="">Categoria</label>
@@ -26,7 +26,7 @@
 					<input class="form-control" type="text" name="descripcion">
 					<br>
 					<div>
-						<button class="btn btn-primary" type="submit">Agregar</button>
+						<button class="btn btn-warning" type="submit">Editar</button>
 					</div>
 
 				</form>		
@@ -53,11 +53,6 @@
 						<?php endforeach?>
 					</tbody>
 				</table>
-				<div>
-					<a href="<?php echo base_url().'/editar'?>">
-						<button class="btn btn-warning" type="button">Editar</button>
-					</a>
-				</div>
 			</div>
 		</div>
 	</div>

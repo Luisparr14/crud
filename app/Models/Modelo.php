@@ -14,4 +14,13 @@ class Modelo extends Model{
         $insertar->insert($datos);
     }
 
+    public function editar($datos, $nombre){
+        $editar=$this->db->table('productos');
+        $editar->set($datos);
+
+        if($editar->where('nombre',$nombre)){
+            $editar->update();
+        }
+    }
+
 }

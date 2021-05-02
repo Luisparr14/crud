@@ -16,6 +16,16 @@ class Home extends BaseController
 		return view('inicio', $info);
 	}
 
+	public function verEditar()
+	{
+		$modelo= new Modelo();
+		$datos=$modelo->listar();
+
+		$info=["datos"=>$datos];
+
+		return view('editar', $info);
+	}
+
 	public function agregar(){
 		$modelo=new Modelo();
 		$datos=[
@@ -29,6 +39,21 @@ class Home extends BaseController
 
 		return redirect()->to(base_url().'/');
 
+	}
+
+	public function editar(){
+		$modelo=new Modelo();
+		$datos=[
+			"categoria"=>$_POST['categoria'],
+			"precio"=>$_POST['precio'],
+			"descripcion"=>$_POST['descripcion']
+		];
+
+		$nombre=$_POST['nombre'];
+
+		$modelo->editar($datos,$nombre);		
+
+		return redirect()->to(base_url().'/');
 	}
 
 }
